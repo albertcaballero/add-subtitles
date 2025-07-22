@@ -57,13 +57,13 @@ menu.innerHTML = `
     Time offset: <input type="number" step="0.01" id="subtitle_offset_input" value="0"> seconds
 </div>
 <div class="line">
-    Position offset: <input type="number" id="subtitle_offset_top_input" value="-10"> px
+    Position offset: <input type="number" id="subtitle_offset_top_input" value="-20"> px
 </div>
 <div class="line">
-    Font size: <input type="number" id="subtitle_font_size" value="26"> px
+    Font size: <input type="number" id="subtitle_font_size" value="38"> px
 </div>
 <div class="line">
-    Font : <input type="text" id="subtitle_font" value="Arial">
+    Font : <input type="text" id="subtitle_font" value="">
 </div>
 <div class="line">
     Font color: <input type="text" id="subtitle_font_color" value="rgba(255, 255, 255, 1)">
@@ -271,7 +271,8 @@ setInterval(function(){
             subtitle_line.style.cssText = "font-family: "+subtitle_font+
                 ";font-size: "+subtitle_font_size+
                 "px;color:"+subtitle_font_color+
-                ";background-color:"+subtitle_background_color+";";
+                ";background-color:"+subtitle_background_color+
+                ";size:"+subtitle_font_size+";";
             subtitle_element.appendChild(subtitle_line);
             subtitle_element.appendChild(document.createElement("br"));
         }
